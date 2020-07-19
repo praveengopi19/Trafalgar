@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap');
+
+
+@font-face {
+    font-family : 'Muli';
+    font-style  : normal;
+    font-weight : 500;
+    font-display: swap;
+    src         : url("assets/font/Muli-Regular.ttf") format('truetype');
+}
+
+body {
+    font-family: Muli;
+    font-style : normal;
+    font-size  : 18px;
+    line-height: 23px;
+}
+
+ul {
+
+    margin-block-start  : 0em;
+    margin-block-end    : 0em;
+    margin-inline-start : 0px;
+    margin-inline-end   : 0px;
+    padding-inline-start: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+.topnav {
+    display        : flex;
+    height         : 150px;
+    align-items    : center;
+    width          : 80%;
+    margin         : auto;
+    justify-content: space-between;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist li {
+    margin : 0 15px;
+    color  : #1F1534;
+    opacity: 0.5;
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .topnav {
+        width: 90%;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .topnav {
+        width: 80%;
+    }
+}
+
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {}
