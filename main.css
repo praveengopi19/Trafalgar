@@ -38,9 +38,16 @@ body {
     font-style : normal;
     font-size  : 18px;
     line-height: 23px;
-    width      : 78%;
-    margin     : auto;
+
 }
+
+main,
+header {
+    width : 70%;
+    margin: auto;
+}
+
+
 
 ul {
 
@@ -160,15 +167,14 @@ li {
 }
 
 .service_container {
-    margin-top           : 80px;
+    margin               : 80px 0;
     display              : grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows   : auto;
-    gap                  : 35px 35px;
+    grid-gap             : 35px 35px;
     align-self           : start;
     justify-self         : start;
     justify-items        : center;
-
 }
 
 .service_container_card {
@@ -209,8 +215,6 @@ li {
 }
 
 .service_button {
-
-    margin          : 80px 0;
     padding         : 12px 42px;
     font-size       : 18px;
     font-weight     : 600;
@@ -220,6 +224,148 @@ li {
     border-radius   : 55px;
     color           : #458FF6;
     background-color: white;
+}
+
+.leadingHC_heading {
+    font-weight: bold;
+    font-size  : 36px;
+    line-height: 1.5;
+}
+
+.leadingHC_tag {
+    padding-bottom: 30px;
+    font-weight   : 300;
+    font-size     : 18px;
+    line-height   : 30px;
+    color         : #7D7987;
+}
+
+.sayings {
+    padding         : 64px 0;
+    display         : flex;
+    flex-flow       : row wrap;
+    background-image: linear-gradient(191.49deg, #67C3F3 9.05%, #5A98F2 76.74%);
+    border-radius   : 24px;
+    align-items     : center;
+    align-self      : center;
+    justify-content : space-evenly;
+}
+
+.sayings_heading {
+    display        : flex;
+    justify-content: center;
+    flex-basis     : 100%;
+    font-weight    : bold;
+    font-size      : 36px;
+    line-height    : 48px;
+    color          : #FFFFFF;
+}
+
+.sayings_author_div {
+    flex-basis     : 35%;
+    display        : flex;
+    justify-content: center;
+    align-self     : center;
+    align-items    : center;
+}
+
+.sayings_line {
+    margin-top   : 25px;
+    margin-bottom: 50px;
+    height       : 2px;
+    width        : 56px;
+    background   : white;
+}
+
+.sayings_author {
+    box-sizing   : border-box;
+    margin       : 0 20px;
+    height       : 133px;
+    width        : 133px;
+    border-radius: 50%;
+    border       : 5px solid white;
+}
+
+.sayings_comments {
+    flex-basis : 40%;
+    font-weight: normal;
+    font-size  : 19px;
+    line-height: 30px;
+    color      : rgba(255, 255, 255, 0.9);
+}
+
+.sayings_navigator_dots {
+    margin       : 0 18px;
+    align-self   : center;
+    width        : 10px;
+    height       : 10px;
+    border-radius: 50%;
+    opacity      : 0.3;
+    background   : #5B9BF3;
+}
+
+.sayings_div {
+    display        : flex;
+    justify-content: center;
+    padding        : 50px;
+}
+
+
+.article_container_marigin {
+    margin-top   : 24px;
+    margin-bottom: 35px;
+    margin-left  : 33px;
+    margin-right : 33px;
+}
+
+.article_container_card_heading {
+    font-size  : 21px;
+    line-height: 32px;
+    font-weight: bold;
+}
+
+.article_container_card_tag {
+    padding-top: 12px;
+    font-weight: 300;
+    font-size  : 16px;
+    line-height: 28px;
+    color      : #7D7987;
+}
+
+.article_container_card_link {
+    padding-top: 25px;
+    font-weight: 600;
+    font-size  : 17px;
+    line-height: 28px;
+    color      : #4089ED;
+}
+
+.article_container_card_link_img {
+    margin-left: 15px;
+    position   : relative;
+    top        : 3px;
+    transform  : rotate(-90deg);
+}
+
+.article_container_card_img {
+
+    max-width      : 100%;
+    max-height     : 100%;
+    object-fit     : cover;
+    object-position: center center;
+}
+
+.article_button {
+    padding         : 12px 60px;
+    font-size       : 18px;
+    font-weight     : 600;
+    line-height     : 1.5;
+    border          : 1.4px solid #458FF6;
+    box-sizing      : border-box;
+    border-radius   : 55px;
+    color           : #458FF6;
+    background-color: white;
+    margin-bottom   : 69px;
 }
 
 /*==========  Mobile First Method  ==========*/
