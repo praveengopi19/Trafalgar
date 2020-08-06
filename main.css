@@ -34,11 +34,17 @@
 }
 
 body {
+    box-sizing : border-box;
+    margin     : 0 0;
     font-family: 'Muli';
     font-style : normal;
     font-size  : 18px;
     line-height: 23px;
 
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 main,
@@ -366,6 +372,42 @@ li {
     color           : #458FF6;
     background-color: white;
     margin-bottom   : 69px;
+}
+
+.footer_div {
+    background-image: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+    display         : flex;
+    flex-flow       : row wrap;
+    justify-content : space-between;
+    align-self      : center;
+    color           : white;
+    padding         : 110px 14%;
+    font-weight     : 300;
+    font-size       : 18px;
+    line-height     : 38px;
+}
+
+.footer_div1 {
+    flex-basis : 35%;
+    line-height: 28px;
+}
+
+.footer_heading {
+    font-weight: bold;
+    font-size  : 20px;
+    line-height: 60px;
+}
+
+.footer_company {
+    flex-basis: 15%;
+}
+
+.footer_region {
+    flex-basis: 15%;
+}
+
+.footer_help {
+    flex-basis: 15%;
 }
 
 /*==========  Mobile First Method  ==========*/
