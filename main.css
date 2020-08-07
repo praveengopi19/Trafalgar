@@ -72,26 +72,38 @@ li {
     padding: 100px 0;
 }
 
+.menuicon {
+    position: absolute;
+    top     : 29px;
+    right   : 1px;
+}
 
 .topnav {
-    display        : flex;
-    height         : 125px;
-    align-items    : center;
-    margin         : auto;
-    justify-content: space-between;
+    position   : relative;
+    padding-top: 20px;
+    min-height : 0px;
+    align-items: center;
 }
 
 .navlist {
-    display: flex;
+    display   : none;
+    transition: 0.5s;
+}
+
+.navlist_active {
+    display   : block;
+    transition: 0.5s;
 }
 
 .navlist li {
-    margin : 0 15px;
-    color  : #1F1534;
-    opacity: 0.5;
+    margin    : 15px auto;
+    color     : #1F1534;
+    opacity   : 0.5;
+    text-align: right;
 }
 
 .widthdecider {
+    padding-top    : 50px;
     display        : flex;
     flex-flow      : row wrap;
     margin         : 0 auto;
@@ -101,7 +113,7 @@ li {
 }
 
 .topHeading_content {
-    flex: 0 0 90%;
+    flex: 0 0 100%;
 }
 
 .topHeading_content_div1 {
@@ -136,8 +148,8 @@ li {
 }
 
 .imageSize {
-    width : 250px;
-    height: 171px
+    max-width : 100%;
+    max-height: 500px;
 }
 
 .service {
@@ -175,7 +187,7 @@ li {
 .service_container {
     margin               : 80px 0;
     display              : grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows   : auto;
     grid-gap             : 35px 35px;
     align-self           : start;
@@ -260,7 +272,7 @@ li {
 .sayings_heading {
     display        : flex;
     justify-content: center;
-    flex-basis     : 100%;
+    flex-basis     : 85%;
     font-weight    : bold;
     font-size      : 36px;
     line-height    : 48px;
@@ -268,16 +280,18 @@ li {
 }
 
 .sayings_author_div {
-    flex-basis     : 35%;
+    flex-basis     : 100%;
     display        : flex;
+    flex-flow      : row wrap;
     justify-content: center;
     align-self     : center;
     align-items    : center;
 }
 
+
 .sayings_line {
     margin-top   : 25px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     height       : 2px;
     width        : 56px;
     background   : white;
@@ -293,7 +307,8 @@ li {
 }
 
 .sayings_comments {
-    flex-basis : 40%;
+    margin-top : 20px;
+    flex-basis : 85%;
     font-weight: normal;
     font-size  : 19px;
     line-height: 30px;
@@ -309,6 +324,16 @@ li {
     opacity      : 0.3;
     background   : #5B9BF3;
 }
+
+.sayings_navigator_arrows_previous {
+    transform   : rotate(-180deg);
+    margin-right: 20px;
+}
+
+.sayings_navigator_arrows_next {
+    margin-left: 20px;
+}
+
 
 .sayings_div {
     display        : flex;
@@ -355,7 +380,7 @@ li {
 
 .article_container_card_img {
 
-    max-width      : 100%;
+    width          : 100%;
     max-height     : 100%;
     object-fit     : cover;
     object-position: center center;
@@ -388,8 +413,9 @@ li {
 }
 
 .footer_div1 {
-    flex-basis : 35%;
-    line-height: 28px;
+    flex-basis    : 100%;
+    line-height   : 28px;
+    padding-bottom: 20px;
 }
 
 .footer_heading {
@@ -407,7 +433,7 @@ li {
 }
 
 .footer_help {
-    flex-basis: 15%;
+    flex-basis: 20%;
 }
 
 /*==========  Mobile First Method  ==========*/
@@ -416,24 +442,29 @@ li {
 @media only screen and (min-width : 320px) {}
 
 /* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {}
+@media only screen and (min-width : 480px) {
+    .service_container {
+        grid-template-columns: 1fr;
+    }
+
+    .sayings_navigator_arrows_previous {
+        margin-right: 50px;
+    }
+
+    .sayings_navigator_arrows_next {
+        margin-left: 50px;
+    }
+
+}
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 
-
-    .topHeading_content {
-        flex-basis: 37%;
+    .service_container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .topHeading_illustration {
-        flex-basis: 50%;
-    }
 
-    .imageSize {
-        width : 579px;
-        height: 500px
-    }
 
     .topHeading_content_div1 {
         font-weight: bold;
@@ -446,13 +477,84 @@ li {
         font-size  : 21px;
         line-height: 32px;
     }
+
+    .sayings_navigator_arrows_previous {
+        margin-right: 115px;
+    }
+
+    .sayings_navigator_arrows_next {
+        margin-left: 115px;
+    }
+
+
 }
 
+
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {}
+@media only screen and (min-width : 992px) {
+
+    .navlist li {
+        margin    : 0 15px;
+        color     : #1F1534;
+        opacity   : 0.5;
+        text-align: center;
+    }
+
+    .topnav {
+        display        : flex;
+        height         : 125px;
+        padding-top    : 0px;
+        align-items    : center;
+        justify-content: space-between;
+    }
+
+    .navlist {
+        display: flex;
+    }
+
+    .menuicon {
+        display: none;
+    }
+
+    .service_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .topHeading_content {
+        flex-basis: 37%;
+    }
+
+    .topHeading_illustration {
+        flex-basis: 50%;
+    }
+
+    .imageSize {
+        min-width : 435px;
+        min-height: 500px;
+    }
+
+    .sayings_line {
+        margin-bottom: 50px;
+    }
+
+    .sayings_author_div {
+        flex-basis: 35%;
+    }
+
+    .sayings_comments {
+        margin-top: 0px;
+        flex-basis: 40%;
+    }
+
+}
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {}
+@media only screen and (min-width : 1200px) {
+    .footer_div1 {
+        flex-basis: 35%;
+    }
+
+}
 
 
 

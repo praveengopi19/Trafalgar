@@ -15,8 +15,14 @@
                 <image src="assets/logo.svg" />
             </a>
         </div>
+
+        <span class="menuicon">
+            <img id="menuicon" src="assets/icons/menu-3-line.svg"></img>
+        </span>
+
+
         <nav>
-            <ul class="navlist">
+            <ul id="navlist_id" class="navlist">
                 <li>Home</li>
                 <li>Find a doctor</li>
                 <li>Apps</li>
@@ -224,12 +230,11 @@
 
             <div class="sayings_div">
                 <span style="display: inline-flex; ">
-                    <img id="previous" style="transform: rotate(-180deg); margin-right:115px"
-                        src="assets/icons/arrow icon.svg" />
+                    <img id="previous" class="sayings_navigator_arrows_previous" src="assets/icons/arrow icon.svg" />
                     <i id="slide_1" style="opacity: 1" class="sayings_navigator_dots"></i>
                     <i id="slide_2" class="sayings_navigator_dots"></i>
                     <i id="slide_3" class="sayings_navigator_dots"></i>
-                    <img id="next" style="margin-left: 115px;" src="assets/icons/arrow icon.svg" />
+                    <img id="next" class="sayings_navigator_arrows_next" src="assets/icons/arrow icon.svg" />
                 </span>
             </div>
         </section>
@@ -344,6 +349,7 @@
             </ul>
         </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>
