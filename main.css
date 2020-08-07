@@ -539,7 +539,10 @@ li {
 
     .sayings_author_div {
         flex-basis: 35%;
+        flex-flow : row nowrap;
     }
+
+
 
     .sayings_comments {
         margin-top: 0px;
